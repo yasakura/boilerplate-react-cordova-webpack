@@ -4,7 +4,6 @@ const path = require('path');
 const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: __dirname + '/src/index.html',
   filename: 'index.html',
-  inject: 'body'
 });
 
 module.exports = {
@@ -24,10 +23,18 @@ module.exports = {
               path.resolve(__dirname, "node_modules")
             ],
             loader: 'babel-loader'
+          },
+          {
+            test: /\.css$/,
+            loader: ['style-loader','css-loader']
+          },
+          {
+            test: /\.(jpe?g|png|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+            loader: 'url-loader?limit=100000'
           }
-      ]
+        ]
     },
-    devtool: "source-map",
+    devtool: 'cheap-module-source-map',
     context: __dirname,
     plugins: [
       HTMLWebpackPluginConfig

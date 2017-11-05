@@ -1,0 +1,11 @@
+body:before {
+  background-color: #84d884;
+  color: #343536;
+  content: 'My custom css is loaded';
+  display: block;
+  font-weight: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
