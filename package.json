@@ -27,6 +27,7 @@
     "css-loader": "^0.28.7",
     "framework7": "1.6.5",
     "framework7-react": "^0.9.3",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "^1.0.16",
